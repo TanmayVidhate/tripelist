@@ -12,6 +12,9 @@ export function Form() {
 
         let formData = {id : Date.now() % 100 , description , quantity , packed : false}
         console.log(formData)
+
+        setDescription("")
+        setQuantity(1)
     }
     return (
         <>
