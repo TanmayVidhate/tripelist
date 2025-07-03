@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { ToastContainer, toast } from 'react-toastify';
 import "../index.css"
 export function Form() {
     const [description,setDescription] = useState("")
@@ -6,6 +7,9 @@ export function Form() {
 
     const handleSubmit = (e) => {
         e.preventDefault(); 
+        if ( !description )
+           toast.error("Please Enter Description 💀") 
+
         let formData = {id : Date.now() % 100 , description , quantity , packed : false}
         console.log(formData)
     }
@@ -23,8 +27,8 @@ export function Form() {
                 </select>
                 <input type='text' placeholder='Item...' value={description}  onChange={(e) => setDescription(e.target.value)}/>
                 <button>Add</button>
+                <ToastContainer position="top-center"/>
             </form>
-
         </>
     )
 }
