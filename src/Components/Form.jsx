@@ -6,14 +6,14 @@ export function Form() {
 
     const handleSubmit = (e) => {
         e.preventDefault(); 
-        let formData = {id : Date.now().toString().slice(0, 2) , description , quantity , packed : false}
+        let formData = {id : Date.now() % 100 , description , quantity , packed : false}
         console.log(formData)
     }
     return (
         <>
             <form className='add-form' onSubmit={handleSubmit}>
                 <h3>What do you need for your 🎒 trip?</h3>
-                <select value={quantity} onChange={(e) => setQuantity(e.target.value)}>
+                <select value={quantity} onChange={(e) => setQuantity(Number(e.target.value))}>
                     {Array.from({ length: 10 }, (_, i) => i + 1).map
                         ((num) =>
                             <option value={num} key={num}>
