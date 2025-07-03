@@ -1,16 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "../index.css"
 export function Form() {
+    const [description,setDescription] = useState("")
+    const [quantity,setQuantity] = useState(1)
 
     const handleSubmit = (e) => {
         e.preventDefault(); 
-        
+        let formData = {id : Date.now().toString().slice(0, 2) , description , quantity , packed : false}
+        console.log(formData)
     }
     return (
         <>
             <form className='add-form' onSubmit={handleSubmit}>
                 <h3>What do you need for your 🎒 trip?</h3>
-                <select>
+                <select value={quantity} onChange={(e) => setQuantity(e.target.value)}>
                     {Array.from({ length: 10 }, (_, i) => i + 1).map
                         ((num) =>
                             <option value={num} key={num}>
@@ -18,7 +21,7 @@ export function Form() {
                             </option>
                         )}
                 </select>
-                <input type='text' placeholder='Item...' />
+                <input type='text' placeholder='Item...' value={description}  onChange={(e) => setDescription(e.target.value)}/>
                 <button>Add</button>
             </form>
 
