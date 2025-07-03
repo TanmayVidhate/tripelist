@@ -1,12 +1,18 @@
-
 import { Logo } from '../Components/Logo'
-
+import { Form } from '../Components/Form'
+import { PackingList } from '../Components/PackingList'
+import { Footer } from '../Components/Footer'
 function App() {
-  
+
 
   return (
     <>
-      <Logo/>
+      <div className='app'>
+        <Logo />
+        <Form />
+        <PackingList />
+        <Footer />
+      </div>
     </>
   )
 }
