@@ -11,12 +11,16 @@ function App() {
     setNewItem((newItem) => [...newItem, formData])
   }
 
+  const deletdFrmData = (id) => {
+    setNewItem((newItem) => newItem.filter((newItem) => newItem.id !== id) )
+  }
+
   return (
     <>
       <div className='app'>
         <Logo />
         <Form addNewItem = {handleNewFrmData}/>
-        <PackingList newItem = {newItem} />
+        <PackingList newItem = {newItem} ondelete = {deletdFrmData} />
         <Footer />
       </div>
     </>
