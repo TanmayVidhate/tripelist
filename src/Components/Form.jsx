@@ -1,17 +1,19 @@
 import React, { useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 import "../index.css"
-export function Form() {
+export function Form({addNewItem}) {
+    
     const [description,setDescription] = useState("")
     const [quantity,setQuantity] = useState(1)
-
+   
     const handleSubmit = (e) => {
         e.preventDefault(); 
         if ( !description )
            toast.error("Please Enter Description 💀") 
 
         let formData = {id : Date.now() % 100 , description , quantity , packed : false}
-        console.log(formData)
+       
+        addNewItem(formData)
 
         setDescription("")
         setQuantity(1)
