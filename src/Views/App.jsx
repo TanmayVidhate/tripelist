@@ -5,14 +5,14 @@ import { PackingList } from '../Components/PackingList'
 import { Footer } from '../Components/Footer'
 
 function App() {
-  const [newItem, setNewItem] = useState([])
+  const [Item, setItem] = useState([])
 
   const handleNewFrmData = (formData) => {
-    setNewItem((newItem) => [...newItem, formData])
+    setItem((Item) => [...Item, formData])
   }
 
   const deletdFrmData = (id) => {
-    setNewItem((newItem) => newItem.filter((newItem) => newItem.id !== id) )
+    setItem((Item) => Item.filter((Item) => Item.id !== id) )
   }
 
   return (
@@ -20,7 +20,7 @@ function App() {
       <div className='app'>
         <Logo />
         <Form addNewItem = {handleNewFrmData}/>
-        <PackingList newItem = {newItem} ondelete = {deletdFrmData} />
+        <PackingList Item = {Item} ondelete = {deletdFrmData} />
         <Footer />
       </div>
     </>
