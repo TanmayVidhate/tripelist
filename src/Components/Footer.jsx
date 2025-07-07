@@ -5,6 +5,14 @@ export function Footer({ Item }) {
   const PackedItems = Item.filter((item) => item.packed === true).length
   const Percentage = NoOfItems > 0 ? Math.round((PackedItems / NoOfItems) * 100) : 0;
 
+  if (NoOfItems === 0) {
+    return (
+      <footer className='stats'>
+        <em>Start adding some items to your packing list 🚀</em>
+      </footer>
+    );
+  }
+
   return (
     <footer className='stats'>
       <em>
@@ -12,13 +20,10 @@ export function Footer({ Item }) {
           ?
           "You got everything! Ready to go ✈ 👋"
           :
-          `You have ${NoOfItems} items on your list, and you already packed ${PackedItems} ${Percentage}% `
+          `You have ${NoOfItems} items on your list, and you already packed ${PackedItems} (${Percentage}%) `
         }
       </em>
-
     </footer>
-
-
-  )
+  );
 }
 
