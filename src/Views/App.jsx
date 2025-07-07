@@ -34,7 +34,7 @@ function App() {
       <div className='app'>
         <Logo />
         <Form addNewItem = {handleNewFrmData}/>
-        <PackingList Item = {Item} ondelete = {deletdFrmData} oncheckebox = {handleCheckBox} />
+        <PackingList Item = {Item} ondelete = {deletdFrmData} oncheckebox = {handleCheckBox} onreset={handleReset} />
         <Footer Item = {Item}/>
       </div>
     </>
