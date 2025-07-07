@@ -15,12 +15,17 @@ function App() {
     setItem((Item) => Item.filter((Item) => Item.id !== id) )
   }
 
+  const handleCheckBox = (id) =>{
+    console.log("id==",id)
+    setItem((Item) => Item.map ((item) => item.id === id ? {...item, packed : !item.packed} : item) )
+  }
+
   return (
     <>
       <div className='app'>
         <Logo />
         <Form addNewItem = {handleNewFrmData}/>
-        <PackingList Item = {Item} ondelete = {deletdFrmData} />
+        <PackingList Item = {Item} ondelete = {deletdFrmData} oncheckebox = {handleCheckBox} />
         <Footer />
       </div>
     </>
