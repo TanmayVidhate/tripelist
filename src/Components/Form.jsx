@@ -1,18 +1,21 @@
 import React, { useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 import "../index.css"
-export function Form({addNewItem}) {
-    
-    const [description,setDescription] = useState("")
-    const [quantity,setQuantity] = useState(1)
-   
-    const handleSubmit = (e) => {
-        e.preventDefault(); 
-        if ( !description )
-           toast.error("Please Enter Description 💀") 
+export function Form({ addNewItem }) {
 
-        let formData = {id : Date.now() % 100 , description , quantity , packed : false}
-       
+    const [description, setDescription] = useState("")
+    const [quantity, setQuantity] = useState(1)
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        
+        if (!description) {
+            toast.error("Please Enter Description 💀")
+            return null
+        }
+
+        let formData = { id: Date.now() % 100, description, quantity, packed: false }
+
         addNewItem(formData)
 
         setDescription("")
@@ -30,9 +33,9 @@ export function Form({addNewItem}) {
                             </option>
                         )}
                 </select>
-                <input type='text' placeholder='Item...' value={description}  onChange={(e) => setDescription(e.target.value)}/>
+                <input type='text' placeholder='Item...' value={description} onChange={(e) => setDescription(e.target.value)} />
                 <button>Add</button>
-                <ToastContainer position="top-center"/>
+                <ToastContainer position="top-center" />
             </form>
         </>
     )
