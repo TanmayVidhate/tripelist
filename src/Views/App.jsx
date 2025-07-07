@@ -25,7 +25,7 @@ function App() {
         <Logo />
         <Form addNewItem = {handleNewFrmData}/>
         <PackingList Item = {Item} ondelete = {deletdFrmData} oncheckebox = {handleCheckBox} />
-        <Footer />
+        <Footer Item = {Item}/>
       </div>
     </>
   )
