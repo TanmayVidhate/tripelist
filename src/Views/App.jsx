@@ -16,7 +16,6 @@ function App() {
   }
 
   const handleCheckBox = (id) =>{
-    console.log("id==",id)
     setItem((Item) => Item.map ((item) => item.id === id ? {...item, packed : !item.packed} : item) )
   }
 
