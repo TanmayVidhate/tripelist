@@ -21,7 +21,7 @@ TripList is a simple and useful web app built with **ReactJS** that helps you or
 
 ## 📸 Screenshot
 
-![TripList UI](public/linkedinpost.png) <!-- Replace with actual image path if adding to GitHub -->
+![TripList UI](src/assets/linkedinpost.png) <!-- Replace with actual image path if adding to GitHub -->
 
 ---
 
