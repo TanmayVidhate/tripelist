@@ -87,7 +87,7 @@ input {
 .list ul{
   margin-left: -50px;
   width: 50%;
-  border: 5px solid red;
+  
 }
 
 .actions button,
@@ -159,7 +159,7 @@ input[type="checkbox"] {
     align-items: center;
     gap: 10px;
     padding: 1.2rem 0;
-    border: 5px solid yellow;
+    
   }
   .frm-input{
     display: flex;
@@ -172,7 +172,9 @@ input[type="checkbox"] {
   input {
     margin: 1vw;
   }
-  
+  .list{
+    height: auto;
+  }
 
   .list ul {
     width: 50%;
@@ -197,6 +199,7 @@ input[type="checkbox"] {
 
   .stats {
     font-size: 1.5rem;
+    padding: 1.4rem 0;
   }
 }
 
