@@ -171,6 +171,10 @@ input[type="checkbox"] {
     margin: 1vw;
   }
 
+  .list{
+    height: 50vh;
+  }
+
   .list ul {
     width: 50%;
     margin: auto;
