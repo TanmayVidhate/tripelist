@@ -171,10 +171,10 @@ input[type="checkbox"] {
   input {
     margin: 1vw;
   }
-
+/* 
   .list{
     height:fit-content;
-  }
+  } */
 
   .list ul {
     width: 50%;
