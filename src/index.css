@@ -173,7 +173,7 @@ input[type="checkbox"] {
   }
 
   .list{
-    height: 50vh;
+    height:fit-content;
   }
 
   .list ul {
