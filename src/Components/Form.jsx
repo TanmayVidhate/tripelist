@@ -8,7 +8,7 @@ export function Form({ addNewItem }) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        
+
         if (!description) {
             toast.error("Please Enter Description 💀")
             return null
@@ -24,17 +24,22 @@ export function Form({ addNewItem }) {
     return (
         <>
             <form className='add-form' onSubmit={handleSubmit}>
-                <h3>What do you need for your 🎒 trip?</h3>
-                <select value={quantity} onChange={(e) => setQuantity(Number(e.target.value))}>
-                    {Array.from({ length: 10 }, (_, i) => i + 1).map
-                        ((num) =>
-                            <option value={num} key={num}>
-                                {num}
-                            </option>
-                        )}
-                </select>
-                <input type='text' placeholder='Item...' value={description} onChange={(e) => setDescription(e.target.value)} />
-                <button>Add</button>
+                <div>
+                    <h3>What do you need for your 🎒 trip?</h3>
+                </div>
+                <div className='frm-input'>
+                        <select value={quantity} onChange={(e) => setQuantity(Number(e.target.value))}>
+                            {Array.from({ length: 10 }, (_, i) => i + 1).map
+                                ((num) =>
+                                    <option value={num} key={num}>
+                                        {num}
+                                    </option>
+                                )}
+                        </select>
+                        <input type='text' placeholder='Item...' value={description} onChange={(e) => setDescription(e.target.value)} />
+                    <button>Add</button>
+                </div>
+
                 <ToastContainer position="top-center" />
             </form>
         </>
