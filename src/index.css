@@ -182,9 +182,6 @@ input[type="checkbox"] {
     display: flex;
     text-align: center;
     flex-direction: column;
-  }
-
-  .list ul {
     height: 40vh;
     overflow-y: scroll;
   }
