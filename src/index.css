@@ -81,6 +81,7 @@ input {
   flex-direction: column;
   gap: 3.2rem;
   align-items: center;
+  height: min-content;
 }
 
 .list ul{
