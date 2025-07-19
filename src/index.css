@@ -142,7 +142,7 @@ input[type="checkbox"] {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   h1 {
-    font-size: 1.9rem;
+    font-size: 2rem;
     letter-spacing: 5px;
     /* padding: 1rem; */
   }
@@ -171,10 +171,7 @@ input[type="checkbox"] {
   input {
     margin: 1vw;
   }
-/* 
-  .list{
-    height:fit-content;
-  } */
+  
 
   .list ul {
     width: 50%;
@@ -227,7 +224,7 @@ input[type="checkbox"] {
   input {
     margin: 1vw;
   }
-
+  
   .list ul {
     width: 50%;
     margin: auto;
